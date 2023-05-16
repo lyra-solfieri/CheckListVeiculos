@@ -23,6 +23,7 @@ class DadosCarroState extends State<DadosCarro> {
           children: [
             TextFormField(
               decoration: const InputDecoration(labelText: 'Cliente'),
+              keyboardType: TextInputType.name,
               validator: (value) {
                 if (value == null || value.isEmpty) {
                   return 'digite o nome do Cliente';
@@ -32,6 +33,7 @@ class DadosCarroState extends State<DadosCarro> {
             ),
             TextFormField(
               decoration: const InputDecoration(labelText: 'Veiculo'),
+              keyboardType: TextInputType.text,
               validator: (value) {
                 if (value == null || value.isEmpty) {
                   return 'digite o tipo de veiculo/nome';
@@ -40,7 +42,8 @@ class DadosCarroState extends State<DadosCarro> {
               },
             ),
             TextFormField(
-              decoration: const InputDecoration(labelText: 'Cor'),
+              decoration: const InputDecoration(labelText: 'Cor do Veiculo'),
+              keyboardType: TextInputType.text,
               validator: (value) {
                 if (value == null || value.isEmpty) {
                   return 'digite a cor';
@@ -59,6 +62,7 @@ class DadosCarroState extends State<DadosCarro> {
             ),
             TextFormField(
               decoration: const InputDecoration(labelText: 'Telefone/Celular'),
+              keyboardType: TextInputType.phone,
               validator: (value) {
                 if (value == null || value.isEmpty) {
                   return 'digite o telefone/celular do cliente';
@@ -69,6 +73,7 @@ class DadosCarroState extends State<DadosCarro> {
             TextFormField(
               decoration:
                   const InputDecoration(labelText: 'Outro Telefone/Celular'),
+              keyboardType: TextInputType.phone,
               validator: (value) {
                 if (value == null || value.isEmpty) {
                   return 'digite o telefone/celular do cliente';
@@ -78,6 +83,7 @@ class DadosCarroState extends State<DadosCarro> {
             ),
             TextFormField(
               decoration: const InputDecoration(labelText: 'Ano/Modelo'),
+              keyboardType: TextInputType.datetime,
               validator: (value) {
                 if (value == null || value.isEmpty) {
                   return 'digite o ano/modelo do carro';
@@ -86,16 +92,8 @@ class DadosCarroState extends State<DadosCarro> {
               },
             ),
             TextFormField(
-              decoration: const InputDecoration(labelText: 'Telefone/Celular'),
-              validator: (value) {
-                if (value == null || value.isEmpty) {
-                  return 'digite o telefone/celular do cliente';
-                }
-                return null;
-              },
-            ),
-            TextFormField(
               decoration: const InputDecoration(labelText: 'Placa'),
+              keyboardType: TextInputType.number,
               validator: (value) {
                 if (value == null || value.isEmpty) {
                   return 'digite a placa do carro';
@@ -105,6 +103,7 @@ class DadosCarroState extends State<DadosCarro> {
             ),
             TextFormField(
               decoration: const InputDecoration(labelText: 'Chassi'),
+              keyboardType: TextInputType.number,
               validator: (value) {
                 if (value == null || value.isEmpty) {
                   return 'digite o chassi do carro';
@@ -114,6 +113,7 @@ class DadosCarroState extends State<DadosCarro> {
             ),
             TextFormField(
               decoration: const InputDecoration(labelText: 'Km'),
+              keyboardType: TextInputType.number,
               validator: (value) {
                 if (value == null || value.isEmpty) {
                   return 'digite os km rodados';
